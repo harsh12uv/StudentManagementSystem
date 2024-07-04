@@ -105,6 +105,9 @@ let arrayOfStudents = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email
     const searchButton = document.getElementById("searchButton");
     
     searchButton.addEventListener("click", SearchStudent);
+
+    let flag=false;
+    
     
     
     function SearchStudent(event) {
@@ -148,6 +151,7 @@ let arrayOfStudents = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email
                 let tbody = document.getElementById("table-body");
                 tbody.innerHTML = ``;
                 tbody.append(trow);
+                
                 
             }
            
@@ -351,7 +355,7 @@ let arrayOfStudents = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email
             }
         })
     
-    
+     
     }
     
     const getAllStudent = document.getElementById("Map");
@@ -359,7 +363,8 @@ let arrayOfStudents = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email
     getAllStudent.addEventListener("click", AllStudents);
     
     function AllStudents() {
-        let tableBody = document.querySelector("#table-body");
+        if(flag==false){
+            let tableBody = document.querySelector("#table-body");
           
         arrayOfStudents.map(getStudentDetails);
     
@@ -383,6 +388,12 @@ let arrayOfStudents = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email
             let tbody = document.getElementById("table-body");
             tbody.append(trow);
         }
+        flag=true
+        }
+        else{
+            location.reload();
+        }
+
     }
     
     document.addEventListener("DOMContentLoaded", () => {
