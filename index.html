@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- title -->
+  <div id="title">
+    <p>Student Portal</p>
+  </div>
+  <!-- Header -->
+  <header id="header">
+    <input id="search_Name" type="text" placeholder="Search for perticuler student...">
+    <button id="searchButton" type="submit">Search</button>
+    <button id="Map" type="submit">Get All Student</button>
+  </header>
+<div> </div>
+  <!-- short manue -->
+  <nav id="short-manue">
+    <div class="sort" id="sortAZ">Sort A→Z</div>
+    <div class="sort" id="sortZA">Sort Z→A</div>
+    <div class="sort" id="sortMarks">Sort By Marks</div>
+    <div class="sort" id="sortPassing">Sort By Passing</div>
+    <div class="sort" id="sortClass">Sort By Class</div>
+    <div class="sort" id="sortGender">Sort By Gender</div>
+  </nav>
+  <!-- result table -->
+  <table id="result-table">
+    <thead class="table-head">
+        <td class="table-id">ID</td>
+
+        <td class="table-name ">Name</td>
+
+        <td class="table-gender">Gender</td>
+
+        <td class="table-class">Class</td>
+
+        <td class="table-marks">Marks</td>
+
+        <td class="table-passing">Passing</td>
+
+        <td class="table-email">Email</td>
+    </thead>
+   
+    <tbody id="table-body">
+    
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+
+</html>
